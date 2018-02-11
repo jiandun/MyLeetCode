@@ -1,5 +1,10 @@
 package com.algorithms.array;
 
+/**
+ * Max Chunks To Make Sorted II 可以用一样的代码。。。
+ * @author maple
+ *
+ */
 public class MaxChunksToMakeSorted {
 	public int maxChunksToSorted(int[] arr) {
 		int n = arr.length;

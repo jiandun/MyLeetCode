@@ -2,25 +2,41 @@ package com.algorithms.test;
 
 import java.util.List;
 
+import com.algorithms.array.ArrayNesting;
 import com.algorithms.array.ArrayPartition;
 import com.algorithms.array.FindKthSmallestPairDistance;
 import com.algorithms.array.GlobalAndLocalInversions;
 import com.algorithms.array.MaximumAverageSubarrayI;
 import com.algorithms.array.MaximumSwap;
+import com.algorithms.array.MyCalendarI;
 import com.algorithms.array.NonDecreasingArray;
 import com.algorithms.array.PascalsTriangle;
 import com.algorithms.array.PascalsTriangleII;
 import com.algorithms.array.PlusOne;
+import com.algorithms.array.SearchInRotatedSortedArray;
+import com.algorithms.array.SearchInRotatedSortedArrayII;
+import com.algorithms.array.SubarrayProductLessThanK;
 import com.algorithms.array.ThirdMaximumNumber;
 import com.algorithms.array.ValidTriangleNumber;
+import com.algorithms.bit.PowerOfTwo;
 import com.algorithms.dp.TargetSum;
 import com.algorithms.dp.UniqueSubstringsInWraparoundString;
+import com.algorithms.math.ArrangingCoins;
+import com.algorithms.math.PerfectNumber;
+import com.algorithms.math.SumOfSquareNumbers;
 
 public class TestMain {
 	public static void main(String[] args) {
-		MaximumSwap test = new MaximumSwap();
-		System.out.println(test.maximumSwap(3021));
+		ArrayNesting test = new ArrayNesting();
+		System.out.println(test.arrayNesting(new int[] { 5, 4, 0, 3, 1, 6, 2 }));
 	}
+
+	// public static void main(String[] args) {
+	// int result = 32;
+	// int test = result >> 2;
+	// System.out.println(~test);
+	// System.out.println((test & result));
+	// }
 
 	public static void testY(double min, double max, int steps) {
 		if (max - min > 1) {
