@@ -5,6 +5,7 @@ import java.util.List;
 import com.algorithms.array.ArrayNesting;
 import com.algorithms.array.ArrayPartition;
 import com.algorithms.array.FindKthSmallestPairDistance;
+import com.algorithms.array.FindMinimumInRotatedSortedArray;
 import com.algorithms.array.GlobalAndLocalInversions;
 import com.algorithms.array.MaximumAverageSubarrayI;
 import com.algorithms.array.MaximumSwap;
@@ -12,23 +13,34 @@ import com.algorithms.array.MyCalendarI;
 import com.algorithms.array.NonDecreasingArray;
 import com.algorithms.array.PascalsTriangle;
 import com.algorithms.array.PascalsTriangleII;
-import com.algorithms.array.PlusOne;
 import com.algorithms.array.SearchInRotatedSortedArray;
 import com.algorithms.array.SearchInRotatedSortedArrayII;
 import com.algorithms.array.SubarrayProductLessThanK;
+import com.algorithms.array.SubarraySumEqualsK;
 import com.algorithms.array.ThirdMaximumNumber;
+import com.algorithms.array.TrappingRainWater;
 import com.algorithms.array.ValidTriangleNumber;
 import com.algorithms.bit.PowerOfTwo;
 import com.algorithms.dp.TargetSum;
 import com.algorithms.dp.UniqueSubstringsInWraparoundString;
 import com.algorithms.math.ArrangingCoins;
+import com.algorithms.math.CountPrimes;
+import com.algorithms.math.ExcelSheetColumnTitle;
+import com.algorithms.math.FactorialTrailingZeroes;
+import com.algorithms.math.MinimumMovesToEqualArrayElements;
+import com.algorithms.math.NthDigit;
 import com.algorithms.math.PerfectNumber;
+import com.algorithms.math.PlusOne;
+import com.algorithms.math.ReverseInteger;
+import com.algorithms.math.Sqrt;
 import com.algorithms.math.SumOfSquareNumbers;
+import com.algorithms.math.UglyNumber;
+import com.algorithms.math.ValidPerfectSquare;
 
 public class TestMain {
 	public static void main(String[] args) {
-		ArrayNesting test = new ArrayNesting();
-		System.out.println(test.arrayNesting(new int[] { 5, 4, 0, 3, 1, 6, 2 }));
+		TrappingRainWater test = new TrappingRainWater();
+		System.out.println(test.trap(new int[] {5,2,1,2,1,5}));
 	}
 
 	// public static void main(String[] args) {
