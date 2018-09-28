@@ -1,5 +1,6 @@
 package com.algorithms.test;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import com.algorithms.array.ArrayNesting;
@@ -13,6 +14,7 @@ import com.algorithms.array.MyCalendarI;
 import com.algorithms.array.NonDecreasingArray;
 import com.algorithms.array.PascalsTriangle;
 import com.algorithms.array.PascalsTriangleII;
+import com.algorithms.array.RangeModule;
 import com.algorithms.array.SearchInRotatedSortedArray;
 import com.algorithms.array.SearchInRotatedSortedArrayII;
 import com.algorithms.array.SubarrayProductLessThanK;
@@ -20,7 +22,10 @@ import com.algorithms.array.SubarraySumEqualsK;
 import com.algorithms.array.ThirdMaximumNumber;
 import com.algorithms.array.TrappingRainWater;
 import com.algorithms.array.ValidTriangleNumber;
+import com.algorithms.backtracking.GenerateParentheses;
+import com.algorithms.backtracking.Subsets;
 import com.algorithms.bit.PowerOfTwo;
+import com.algorithms.dp.MaximumSubarray;
 import com.algorithms.dp.TargetSum;
 import com.algorithms.dp.UniqueSubstringsInWraparoundString;
 import com.algorithms.math.ArrangingCoins;
@@ -36,19 +41,32 @@ import com.algorithms.math.Sqrt;
 import com.algorithms.math.SumOfSquareNumbers;
 import com.algorithms.math.UglyNumber;
 import com.algorithms.math.ValidPerfectSquare;
+import com.algorithms.utils.Print;
 
 public class TestMain {
+	// public static void main(String[] args) {
+	// TrappingRainWater test = new TrappingRainWater();
+	// System.out.println(test.trap(new int[] {5,2,1,2,1,5}));
+	// }
+
 	public static void main(String[] args) {
-		TrappingRainWater test = new TrappingRainWater();
-		System.out.println(test.trap(new int[] {5,2,1,2,1,5}));
+		FindTheDuplicateNumber test = new FindTheDuplicateNumber();
+		System.out.println(test.findDuplicate(new int[] {4,3,1,4,2}));
+		// System.out.println(10 & 124);
+		// int[] a = new int[] {123,4,45,86,26,64,61,22,656,767,5};
+		// quickSort(a);
+		// printArray(a);
+		// System.out.println(test.queryRange(2, 4));
+		// System.out.println(test.queryRange(2, 9));
+		// System.out.println(test.queryRange(4, 6));
+
+		// System.out.println(test.queryRange(1, 6));
+		// System.out.println(test.queryRange(1, 7));
 	}
 
-	// public static void main(String[] args) {
-	// int result = 32;
-	// int test = result >> 2;
-	// System.out.println(~test);
-	// System.out.println((test & result));
-	// }
+	public static void maxSum(int[] t) {
+
+	}
 
 	public static void testY(double min, double max, int steps) {
 		if (max - min > 1) {
@@ -124,5 +142,33 @@ public class TestMain {
 			List<Integer> small = list.get(i);
 			printList(small);
 		}
+	}
+
+	public static void quickSort(int[] a) {
+		int left = 0, right = a.length;
+		swap(a, left, right - 1);
+	}
+
+	private static void swap(int[] a, int left, int right) {
+		if (left > right)
+			return;
+		int target = a[left];
+		int i = left, j = right;
+		while (i != j) {
+			while (a[j] >= target && i < j)
+				j--;
+			while (a[i] <= target && i < j)
+				i++;
+			if (i < j) {
+				int temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+			}
+		}
+		a[left] = a[i];
+		a[i] = target;
+
+		swap(a, left, i - 1);
+		swap(a, i + 1, right);
 	}
 }
